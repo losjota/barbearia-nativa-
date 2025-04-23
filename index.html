@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Nativa - Agendamento Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Barbearia Nativa</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#agendamento">Agendar</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Bem-vindo à Barbearia Nativa</h2>
+                <p>Estilo e qualidade para seu visual</p>
+                <a href="#agendamento" class="cta-button">Agende Agora</a>
+            </div>
+        </section>
+
+        <section id="servicos" class="services">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Corte Navalhado</h3>
+                    <p>R$ 30,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Corte com Pente da Máquina</h3>
+                    <p>R$ 25,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-razor"></i>
+                    <h3>Barba</h3>
+                    <p>R$ 30,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-razor"></i>
+                    <h3>Máquina na Barba</h3>
+                    <p>R$ 10,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Pézinho</h3>
+                    <p>R$ 10,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <h3>Pacote Mensal</h3>
+                    <p>R$ 95,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Platinado</h3>
+                    <p>R$ 95,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-sun"></i>
+                    <h3>Luzes</h3>
+                    <p>R$ 75,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Pigmentação</h3>
+                    <p>R$ 40,00</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cut"></i>
+                    <h3>Na Tesoura</h3>
+                    <p>R$ 30,00</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="agendamento" class="booking">
+            <h2>Agende seu Horário</h2>
+            <div class="booking-container">
+                <form id="booking-form">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Serviço:</label>
+                        <select id="service" required>
+                            <option value="">Selecione um serviço</option>
+                            <option value="navalhado">Corte Navalhado - R$ 30,00</option>
+                            <option value="pente">Corte com Pente da Máquina - R$ 25,00</option>
+                            <option value="barba">Barba - R$ 30,00</option>
+                            <option value="maquina_barba">Máquina na Barba - R$ 10,00</option>
+                            <option value="pezinho">Pézinho - R$ 10,00</option>
+                            <option value="pacote">Pacote Mensal - R$ 95,00</option>
+                            <option value="platinado">Platinado - R$ 95,00</option>
+                            <option value="luzes">Luzes - R$ 75,00</option>
+                            <option value="pigmentacao">Pigmentação - R$ 40,00</option>
+                            <option value="tesoura">Na Tesoura - R$ 30,00</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Data:</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Horário:</label>
+                        <select id="time" required>
+                            <option value="">Selecione um horário</option>
+                            <!-- Horários serão preenchidos via JavaScript -->
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button">Agendar</button>
+                </form>
+                <div class="whatsapp-info">
+                    <p><i class="fab fa-whatsapp"></i> Após o agendamento, você será redirecionado para o WhatsApp da barbearia para confirmar seu horário.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <h2>Entre em Contato</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Rua da Barbearia, 123 - Centro</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>(11) 99999-9999</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Segunda-feira:</p>
+                    <p>14:00 às 19:00</p>
+                    <p>Terça a Sábado:</p>
+                    <p>09:00 às 12:00</p>
+                    <p>14:00 às 19:00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Barbearia Nativa. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
